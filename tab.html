@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style type="text/css">
+
+
+        .contents{
+            width: 400px;
+            height: 200px;
+            /* border: 1px solid red; */
+            position: relative;
+        }
+        .contents h2{
+            font-size: 14px;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            background-color: hotpink;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+        .contents h2.on{
+            background: skyblue;
+        }
+
+        .contents ul{
+            position: absolute;
+            left: 0;
+            top: 35px;
+            width: 100%;
+            height: 165px;
+            background-color: skyblue;
+        }
+
+
+        .notice{}
+        .notice h2{}
+        .notice ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 5px 10px;
+        }
+        .notice ul li{
+
+        }
+        .notice ul li a{
+            display: block;
+            width: 70%;
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .notice ul li span{float: right;}
+
+        .gallery{}
+        .gallery h2{
+            left: 105px !important;
+        }
+        .gallery ul{
+            /* display: flex; */
+            justify-content: space-around;
+            align-items: center;
+            display: none;
+        }
+        .gallery ul li{}
+        .gallery ul li img{
+            width: 80px;
+        }
+
+
+    </style>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+    <script lang="java">
+        $(function(){
+
+            $(".contents h2").click(function(){
+
+                $(".contents h2").removeClass("on");
+                $(this).addClass("on");
+
+                $(".contents ul").hide();
+                $(this).next().css({display:"flex"});
+
+            })//click
+
+
+        })// jquery
+    </script>
+</head>
+<body>
+    <div  class="contents">
+
+        <div class="notice">
+            <h2 class="on">공지사항</h2>
+            <ul>
+                <li>
+                    <a href="#">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit rerum quam exercitationem dolor eum sit aliquid iste doloremque fugit quasi voluptate dolore quis officia quas neque, id nesciunt inventore.</a>
+                    <span>23.06.12</span>
+                </li>
+                <li>
+                    <a href="#">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit rerum quam exercitationem dolor eum sit aliquid iste doloremque fugit quasi voluptate dolore quis officia quas neque, id nesciunt inventore.</a>
+                    <span>23.06.12</span>
+                </li>
+                <li>
+                    <a href="#">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit rerum quam exercitationem dolor eum sit aliquid iste doloremque fugit quasi voluptate dolore quis officia quas neque, id nesciunt inventore.</a>
+                    <span>23.06.12</span>
+                </li>
+                <li>
+                    <a href="#">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit rerum quam exercitationem dolor eum sit aliquid iste doloremque fugit quasi voluptate dolore quis officia quas neque, id nesciunt inventore.</a>
+                    <span>23.06.12</span>
+                </li>
+                <li>
+                    <a href="#">5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit rerum quam exercitationem dolor eum sit aliquid iste doloremque fugit quasi voluptate dolore quis officia quas neque, id nesciunt inventore.</a>
+                    <span>23.06.12</span>
+                </li>
+            </ul>
+
+        </div><!-- notice -->
+
+        <div class="gallery">
+            <h2>갤러리</h2>
+            <ul>
+                <li>
+                    <a href="#"> <img src="img/visu_mo_01.jpg" alt="visu_mo"></a>
+                </li>
+                <li>
+                    <a href="#"> <img src="img/visu_mo_01.jpg" alt="visu_mo"></a>
+                </li>
+                <li>
+                    <a href="#"> <img src="img/visu_mo_01.jpg" alt="visu_mo"></a>
+                </li>
+            </ul>
+
+        </div><!-- gallery -->
+
+
+    </div><!-- contents -->
+</body>
+</html>
