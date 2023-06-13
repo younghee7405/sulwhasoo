@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0; box-sizing: border-box;}  
+        .box{
+            width: 300px;
+            height: 350px;
+            border: 1px solid #EEE;
+            background-size: cover;
+            background-position: center top;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s;
+            float: left;
+            margin: 0 20px;
+        }
+        .box1{
+            background-image: url(img/384071782_thumbnail.jpg);
+            
+        }
+        .box2{
+            background-image: url(img/visu_mo_01.jpg);
+            
+        }
+        .box3{
+            background-image: url(img/new_img_04_mo.jpg);
+            
+        }
+
+        .circle{
+            width: 1000px;height: 500px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,.5);
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);        
+            transition: all 0.2s;
+
+            text-align: center;
+            font-size: 12px;
+            padding: 30px;
+        }
+
+        .circle .p1{margin-bottom: 10px;}
+        .box:hover{
+            background-position: center -50px;
+            cursor:url("img/icons8-search-50.png") 20 30, auto;
+        }
+        .box:hover .circle{
+            top: 70%; background-color: rgba(255,255,255,1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <div class="circle">
+            <p class="p1">@123135</p>
+            <p class="p2">
+                #광고 @sulwhasoo.official * 🤍.•💛 피부 더 좋아
+            </p>
+        </div>
+    </div><!-- box -->
+    <div class="box box2">
+        <div class="circle">
+            <p class="p1">@123135</p>
+            <p class="p2">
+                #광고 @sulwhasoo.official * 🤍.•💛 피부 더 좋아
+            </p>
+        </div>
+    </div><!-- box -->
+    <div class="box box3">
+        <div class="circle">
+            <p class="p1">@123135</p>
+            <p class="p2">
+                #광고 @sulwhasoo.official * 🤍.•💛 피부 더 좋아
+            </p>
+        </div>
+    </div><!-- box -->
+</body>
+</html>
